@@ -1,0 +1,2 @@
+services:
+  messenger.transport.amqp.factory: '@App\Messenger\Amqp\AmqpTransportFactory'
