@@ -1,4 +1,4 @@
-This workaround fixes issues with RabbitMQ loosing connection when connection stays idle for longer than 350 sec.
+This workaround fixes issues with RabbitMQ on AWS losing connection when connection stays idle for longer than 350 sec.
 
 Solution is simple - use single connection with multiple channels rather than multiple connections each with one channel. 
 By default, Symfony creates new connection per transport, even if the transport uses the same server. We override this behaviour by reusing previously opened
